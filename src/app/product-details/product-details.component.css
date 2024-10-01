@@ -1,0 +1,17 @@
+.box{
+    border: solid red 2px;
+   
+}
+@keyframes slideFade {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .row{
+    flex-wrap:nowrap !important
+  }

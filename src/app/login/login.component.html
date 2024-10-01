@@ -1,0 +1,45 @@
+<div class="w-75 mx-auto py-4">
+    <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Login now :</h3>
+    <form (ngSubmit)="handleLogin(LoginForm)"  [formGroup]="LoginForm">
+    
+        <!-- <label for="name">Name :</label>
+        <input [class]="Empty?'input-error':''"  formControlName="name" type="text" class="form-control mb-2" id="name">
+        <div *ngIf="LoginForm.get('name')?.errors && LoginForm.get('name')?.touched ">
+            <p style="color: red;" *ngIf="LoginForm.get('name')?.getError('minlength')">the minimum length required for name is 3</p>
+            <p style="color: #ff0000;" *ngIf="LoginForm.get('name')?.getError('maxlength')">the maximum length required for name is 12</p>
+            <p style="color: red;" *ngIf="LoginForm.get('name')?.getError('required')" >the name is required</p>
+        </div> -->
+        
+        <label for="email">Email :</label>
+        <input [class]="Empty?'input-error':''" formControlName="email" type="email" class="form-control mb-2" id="email">
+        <div *ngIf="LoginForm.get('email')?.errors && LoginForm.get('email')?.touched ">
+            <p style="color: red;" *ngIf="LoginForm.get('email')?.getError('email')">Email is not valid</p>
+            <p style="color: red;" *ngIf="LoginForm.get('required')?.getError('required')" >the email is required</p>
+        </div>
+        <label for="password">Password :</label>
+        <input [class]="Empty?'input-error':''" formControlName="password" type="password" class="form-control mb-2" id="password">
+        <div *ngIf="LoginForm.get('password')?.errors && LoginForm.get('password')?.touched ">
+            <p style="color: red;" *ngIf="LoginForm.get('password')?.getError('pattern')">The password must start with captial letter and followed by any 3 to 10  letters or numbers or special charcters </p>
+            <p style="color: red;" *ngIf="LoginForm.get('required')?.getError('required')" >the password is required</p>
+        </div>
+        <!-- <label for="rePassword">RePassword :</label>
+        <input [class]="Empty?'input-error':''" formControlName="rePassword" type="password" class="form-control mb-2" id="rePassword">
+        <div *ngIf="LoginForm.get('rePassword')?.errors && LoginForm.get('rePassword')?.touched ">
+            <p style="color: red;" *ngIf="LoginForm.get('rePassword')?.getError('pattern')">The password must start with captial letter and followed by any 3 to 10  letters or numbers or special charcters  </p>
+            <p style="color: red;" *ngIf="LoginForm.get('rePassword')?.getError('required')" >the password is required</p>
+        </div>
+        <label for="phone">Phonee :</label>
+        <input [class]="Empty?'input-error':''" formControlName="phone" type="tel" class="form-control mb-2" id="phone">
+        <div *ngIf="LoginForm.get('phone')?.errors && LoginForm.get('phone')?.touched ">
+            <p style="color: red;" *ngIf="LoginForm.get('phone')?.getError('pattern')">The phone must start 01 and contain 11 digits</p>
+            <p style="color: red;" *ngIf="LoginForm.get('phone')?.getError('required')" >the phone number is required</p>
+        </div> -->
+        <button class="bg-main btn border-none border-0 text-white ms-auto d-block" type="submit" [disabled]="LoginForm.invalid">
+            <i *ngIf="isloading" class="fas fa-spinner fa-spin"></i>
+            <span *ngIf="!isloading">Login</span>
+        </button>
+     
+    
+    </form>
+    </div>
+    

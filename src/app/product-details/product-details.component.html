@@ -1,0 +1,24 @@
+<div class="row py-4 align-items-center">
+  <div class="col-md-4">
+    <!-- <h4>product images</h4> -->
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let slide of productDetails.images">
+        <ng-template carouselSlide>
+          <img [src]="slide">
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+  <div class="col-md-7 box" [@slideFade]>
+    <h2 class="h4 fw-bold mb-2">{{productDetails?.title}}</h2>
+    <p class="text-muted p-3">{{productDetails?.description}}</p>
+    <div class="d-flex align-items-center justify-content-center">
+      <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: larger;" class="text-muted fw-bold mx-5">{{productDetails.price}}EGB</span>
+      <i class="fas fa-star rating-color"></i>
+      <i class="fas fa-star rating-color"></i>
+      <i class="fas fa-star rating-color"></i>
+      <i class="fas fa-star rating-color"></i>
+    </div>
+    <button class="btn bg-main text-white w-100 my-2 ">Add +</button>
+  </div>
+</div>

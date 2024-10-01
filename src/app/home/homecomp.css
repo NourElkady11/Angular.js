@@ -1,0 +1,22 @@
+h3{
+    color: black;
+}
+/* .prod:hover{
+    border: solid green 3px;
+  
+} */
+.prod:hover .zorar{
+    opacity: 1;
+    transform: translate(0%);
+   
+}
+
+.prod img{
+    width: 100%;
+    height: 100%;
+}
+.zorar{
+    transition: transform 1s , opacity 1s;
+    opacity: 0;
+    transform: translateY(60%);
+}

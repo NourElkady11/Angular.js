@@ -1,0 +1,50 @@
+    <!-- <app-slider [username_comming_from_home]="username"></app-slider> -->
+    <!-- <div [ngSwitch]="onsale">
+        <div *ngSwitchCase="true">onsalee yastaa</div>
+        <div *ngSwitchCase="false">not on saleee</div>
+        <div *ngSwitchDefault>defult</div>
+    </div> -->
+    <!-- <ng-template class="text-bg-danger" #hambozo>
+            <h3>welcome to templete</h3>
+    </ng-template> -->
+    <!-- <table *ngIf="onsale ; else hambozo"  class="table">
+        <thead>
+            <th>index</th>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>addrress</th>
+        </thead>
+        <tbody>
+            <tr [class]="check(i)? 'bg-danger':'bg-primary' " *ngFor="let user of users ; let i=index ;let is_even=even">
+                <td >{{i}}</td>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.address}}</td>
+            </tr>
+        </tbody>
+    </table> -->
+    <h3 class="color">welcomeee to Homee_component</h3>
+    <div class="row">
+        <div *ngFor="let item of products" class="col-md-4 col-sm-4 col-lg-2">
+            <a [routerLink]="['/productDetails',item._id]">
+            <div class="prod d-flex flex-column justify-content-center align-items-center">
+                <span class="text-main fw-bold font-sm">{{item.category.name}}</span>
+                <img [src]="item.imageCover" alt="">
+                <h3 class="h6">{{item.title.split(" ").slice(0,2).join(" ")}}</h3>
+                <div class=" d-flex align-items-center justify-content-around">
+                    <span class="text-muted fw-bold font-sm">{{item.price}}EGB</span>
+                <i class="fas fa-star rating-color "></i>
+                </div>
+                <button class="zorar btn bg-main text-white w-100 my-2 mx-2">Add +</button>
+            </div>
+        </a>
+        
+
+
+        </div>
+    </div>
+
+  
+    <!-- <img [src]="" -->
